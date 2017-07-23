@@ -15,5 +15,18 @@ TEAM_LIST = [
     "VP",
     "EG",
     "Liquid",
-    ""
+    "IG",
+    "Newbee",
+    "Secret",
+    "HR",
+    "Empire",
+    "iG.V",
+    'LFY',
+    'LGD',
+    'TNC',
+    'Fnatic',
+    'Execration',
+    "C9",
+    "DC",
+    "Infamous"
 ]
