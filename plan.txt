@@ -1,0 +1,6 @@
+opendota api
+
+
+
+
+table with fantasy points vals for each proplayer at the ti7
