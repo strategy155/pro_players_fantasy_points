@@ -10,18 +10,20 @@ def get_pro_players_request():
 
 
 def get_pro_players_to_tag(pro_players_request):
-    print('')
+    ti_players = {}
     for player in pro_players_request:
-        name = player['name']
         team_tag = player['team_tag']
-        team_tag_lowered = team_tag.lower()
-        is_locked = player['is_locked']
-        if team_tag_lowered in definitions.TEAM_LIST and is_locked:
-            print(name, team_tag, end='\t')
-
-
-def get_players_of_ti7(pro_players):
-
+        if team_tag:
+            team_tag_lowered = team_tag.lower()
+            is_locked = player['is_locked']
+            name = player['name']
+            if team_tag_lowered in definitions.TEAM_LIST and is_locked:
+                ti_players.setdefault(team_tag, []).append(player)
+    for team in ti_players.keys():
+        print(team, end=':\t')
+        for player in ti_players[team]:
+            print(player, end='\t')
+        print(len(ti_players[team]))
 
 
 if __name__ == '__main__':
