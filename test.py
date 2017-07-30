@@ -2,12 +2,6 @@ import requests
 import definitions
 import json
 
-def get_pro_players_request():
-    requests_object = requests.get(definitions.PRO_PLAYERS_REQUEST)
-    requests_dictionary_text = requests_object.text
-    requests_dictionary_unjsoned = json.loads(requests_dictionary_text)
-    return requests_dictionary_unjsoned
-
 
 def get_pro_players_to_tag(pro_players_request):
     ti_players = {}
@@ -21,6 +15,14 @@ def get_pro_players_to_tag(pro_players_request):
                 ti_players.setdefault(team_tag, []).append(player)
     return ti_players
 
+
+def get_request(api_method):
+    requests_object = requests.get(api_method)
+    requests_dictionary_text = requests_object.text
+    requests_dictionary_unjsoned = json.loads(requests_dictionary_text)
+    return requests_dictionary_unjsoned
+
+
 if __name__ == '__main__':
-    pro_players_request = get_pro_players_request()
-    get_pro_players_to_tag(pro_players_request)
+    pro_players_request = get_request(definitions.PRO_PLAYERS_REQUEST)
+    ti_players = get_pro_players_to_tag(pro_players_request)
