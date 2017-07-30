@@ -17,17 +17,9 @@ def get_pro_players_to_tag(pro_players_request):
             team_tag_lowered = team_tag.lower()
             is_locked = player['is_locked']
             name = player['name']
-            if team_tag_lowered in definitions.TEAM_LIST and is_locked:
+            if (team_tag_lowered in definitions.TEAM_LIST and is_locked) or (team_tag_lowered == 'xctn' and name in definitions.XCTN_TEAM):
                 ti_players.setdefault(team_tag, []).append(player)
-            if team_tag_lowered == 'xctn':
-                print(name)
-    for team in ti_players.keys():
-        print(team, end=':\t')
-        for player in ti_players[team]:
-            if team == 'XctN':
-                print(player, end='\t')
-        print(len(ti_players[team]))
-
+    return ti_players
 
 if __name__ == '__main__':
     pro_players_request = get_pro_players_request()

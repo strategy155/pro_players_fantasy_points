@@ -25,8 +25,14 @@ TEAM_LIST = [
     'lgd',
     'tnc',
     'fnatic',
-    'xctn',
     "c9",
     "dc",
     "infamous"
+]
+XCTN_TEAM= [
+    "LeumiK",
+    "James",
+    "Nando",
+    "Raging Potato",
+    "Rr~"
 ]
