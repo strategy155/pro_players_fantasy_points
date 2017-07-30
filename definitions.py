@@ -10,7 +10,7 @@ PRO_MATCHES_REQUEST = urllib.parse.urljoin(BASE_API_SERVER, PRO_MATCHES_METHOD)
 MATCHES_REQUEST = urllib.parse.urljoin(BASE_API_SERVER, MATCHES_METHOD)
 TEAMS_REQUEST = urllib.parse.urljoin(BASE_API_SERVER, TEAMS_METHOD)
 PRO_PLAYERS_REQUEST = urllib.parse.urljoin(BASE_API_SERVER, PRO_PLAYERS_METHOD)
-TEAM_LIST = [
+TEAM_TAG_LIST = [
     "og",
     "vp",
     "eg",
@@ -27,7 +27,28 @@ TEAM_LIST = [
     'fnatic',
     "c9",
     "dc",
-    "infamous"
+    "infamous",
+    "xctn"
+]
+TEAM_NAME_LIST = [
+    "Team Liquid",
+    "Virtus.pro",
+    "Evil Geniuses",
+    "LGD.Forever Young",
+    "LGD-GAMING",
+    "Newbee",
+    "TNC Pro Team",
+    "Team Secret",
+    "OG Dota2",
+    "Invictus Gaming",
+    "Team Empire",
+    "Fnatic",
+    "Digital Chaos",
+    "iG.Vitality",
+    "Execration",
+    "Infamous、",
+    "Cloud9",
+    "HellRaisers"
 ]
 XCTN_TEAM= [
     "LeumiK",
